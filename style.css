@@ -21,7 +21,7 @@ h2 {
 
 h4 {
     font-size: 20px;
-    color: #FBAF1B;
+    color: #fcaf17;
 }
 
 h6 {
@@ -79,7 +79,7 @@ h6 {
 
 #navbar li a:hover,
 #navbar li a.active{
-    color: #FBAF1B;
+    color: #fcaf17;
 }   
 
 #navbar li a.active::after,
@@ -87,7 +87,7 @@ h6 {
     content: "";
     width: 30%;
     height: 2px;
-    background-color: #FBAF1B;
+    background-color: #fcaf17;
     position: absolute;
     bottom: -4px;
     left: 20px;
@@ -117,7 +117,7 @@ h6 {
 
 #navbarr li a:hover,
 #navbarr li a.active{
-    color: #FBAF1B;
+    color: #fcaf17;
 }   
 
 #navbarr li a.active::after,
@@ -125,7 +125,7 @@ h6 {
     content: "";
     width: 30%;
     height: 2px;
-    background-color: #FBAF1B;
+    background-color:#fcaf17;
     position: absolute;
     bottom: -4px;
     left: 20px;
@@ -143,6 +143,16 @@ h6 {
     left: 0;
 }
 
+#but a{
+  text-decoration: none;
+  color: #fcaf17;
+}
+
+
+#but a:hover,
+#but a.active{
+    color: #c98300;
+} 
 
 #hero {
     /* background-image: url(img/background.jpg);
@@ -157,7 +167,7 @@ h6 {
 }
 
 #main-bg {
-    background-image: url(img/background1.jpg);
+    background-image: url(img/background2.jpg);
     height: 90vh;
     width: 100%;
     background-size: cover;
@@ -230,7 +240,7 @@ body {
 }
 
 .subtitle {
-  color: #f4a000;
+  color: #fcaf17;
   font-size: 20px;
   margin-bottom: 10px;
 }
@@ -259,7 +269,7 @@ body {
   margin-bottom: 5px;
 }
 .stat h2 {
-  color: #f4a000;
+  color: #fcaf17;
   font-size: 32px;
   margin-bottom: 5px;
 }
@@ -365,14 +375,14 @@ body {
   font-size: 1.8rem;
   font-weight: 400;
   letter-spacing: 1px;
-  color: #f5a623;
+  color: #fcaf17;
   margin-bottom: 10px;
 }
 
 .clients h3 {
   font-size: 2rem;
   font-weight: 700;
-  color: #f5a623;
+  color: #fcaf17;
   margin-bottom: 100px;
 }
 
@@ -445,7 +455,7 @@ body {
 
 .subtitle {
   text-align: center;
-  color: #f4a000;
+  color: #fcaf17;
   font-size: 14px;
   margin-bottom: 10px;
 }
@@ -460,7 +470,7 @@ body {
 
 .subtitlee {
   /* text-align: center; */
-  color: #f4a000;
+  color: #fcaf17;
   font-size: 14px;
   margin-bottom: 10px;
 }
@@ -546,7 +556,7 @@ body {
   border-radius: 50%;
   overflow: hidden;
   border: 3px solid #ffffff;
-  box-shadow: 0 0 0 4px #f5a623;
+  box-shadow: 0 0 0 4px #fcaf17;
 }
 
 .profile-pic img {
@@ -565,7 +575,7 @@ body {
 .review-card h4 {
   font-size: 16px;
   font-weight: 600;
-  color: #b97900;
+  color: #fcaf17;
   margin: 0;
 }
 
@@ -578,14 +588,14 @@ body {
   font-size: 1.8rem;
   font-weight: 400;
   letter-spacing: 1px;
-  color: #f5a623;
+  color: #fcaf17;
   margin-bottom: 10px;
 }
 
 .testimonials-section h3 {
   font-size: 2rem;
   font-weight: 700;
-  color: #f5a623;
+  color: #fcaf17;
   margin-bottom: 100px;
 }
 .video-card {
@@ -611,7 +621,7 @@ body {
 
 
 .cta-section {
-  background-color: #f9ac1a; /* Bright orange */
+  background-color: #fcaf17; /* Bright orange */
   padding: 60px 20px;
   display: flex;
   justify-content: center;
@@ -1105,7 +1115,7 @@ body {
 /* Subtitle */
 .growth-container h4 {
   font-size: 1rem;
-  color: #f5a623;  /* Orange accent */
+  color: #fcaf17;  /* Orange accent */
   letter-spacing: 2px;
   margin-bottom: 10px;
 }
@@ -1135,7 +1145,7 @@ body {
 .stat .number {
   font-size: 2.5rem;
   font-weight: 700;
-  color: #f5a623;  /* Orange accent */
+  color: #fcaf17;  /* Orange accent */
   margin-bottom: 10px;
 }
 
@@ -1159,7 +1169,7 @@ body {
 .section-subtitle {
   text-align: center;
   font-size: 1.2rem;
-  color: #ffb300;
+  color: #fcaf17;
   margin-bottom: 10px;
 }
 
@@ -1204,7 +1214,7 @@ body {
 
 
 .container h3{
-  color: #ffb300;
+  color: #fcaf17;
 }
 
 
@@ -1226,14 +1236,14 @@ body {
 
 .track-order-title {
   font-size: 2rem;
-  color: #f9a825;
+  color: #fcaf17;
   margin-bottom: 30px;
   font-weight: bold;
 }
 
 .track-order-box,
 .track-order-details {
-  background: #ffb300;
+  background: #fcaf17;
   border-radius: 8px;
   padding: 20px;
   display: inline-block;
@@ -1273,7 +1283,7 @@ button#trackOrderStartBtn {
   border: none;
   border-radius: 4px;
   font-weight: bold;
-  color: #f9a825;
+  color: #fcaf17;
   cursor: pointer;
 }
 
@@ -1346,7 +1356,7 @@ button#trackOrderStartBtn {
 }
 
 .contact-info h2 {
-  color: #ffb300;
+  color: #fcaf17;
   font-size: 2rem;
   margin-bottom: 10px;
 }
@@ -1395,7 +1405,7 @@ button#trackOrderStartBtn {
 }
 
 .contact-form button {
-  background: #ffb300;
+  background: #fcaf17;
   color: #fff;
   border: none;
   padding: 12px;
@@ -1406,7 +1416,7 @@ button#trackOrderStartBtn {
 }
 
 .contact-form button:hover {
-  background: #e09e00;
+  background: #fcaf17;
 }
 
 .contact-map {
@@ -1421,7 +1431,7 @@ button#trackOrderStartBtn {
 
 .contact-table-wrapper h3 {
   font-size: 1.5rem;
-  color: #ffb300;
+  color: #fcaf17;
   margin-bottom: 15px;
   text-align: center;
 }
@@ -1452,4 +1462,46 @@ button#trackOrderStartBtn {
 
 .contact-table tr:hover {
   background-color: #f1f1f1;
+}
+
+
+
+
+/* loading animations */
+
+/* Preloader styles */
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: white;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1; /* Start fully visible */
+}
+
+/* Simple loader animation (spinning circle) */
+.loader {
+  border: 8px solid #f3f3f3;
+  border-top: 8px solid #fcaf17; /* blue color */
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1s linear infinite;
+}
+
+/* Spin animation */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* When preloader is hidden */
+#preloader.hidden {
+  opacity: 0;
+  pointer-events: none;
 }
