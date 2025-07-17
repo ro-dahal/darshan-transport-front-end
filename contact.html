@@ -56,16 +56,21 @@
   </div>
   <div class="contact-map">
     <iframe
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3023.833560451077!2d-74.0060152845953!3d40.71277577933109!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDQyJzQ2LjAiTiA3NMKwMDAnMTMuNSJX!5e0!3m2!1sen!2sus!4v1615562642769!5m2!1sen!2sus"
+      id="locationMap"
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14130.863827701099!2d85.31426434999999!3d27.717245200000006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb196a542c2bfb%3A0x6c7d2d06aa83bd8e!2sKathmandu%2C%20Nepal!5e0!3m2!1sen!2sus!4v1637685642769!5m2!1sen!2sus"
       width="100%"
-      height="300"
+      height="400"
       style="border:0;"
       allowfullscreen=""
       loading="lazy">
     </iframe>
+    <div class="map-loading" id="mapLoading" style="display: none;">
+      <p>Loading map...</p>
+    </div>
   </div>
   <div class="contact-table-wrapper">
   <h3>Booking Area</h3>
+  <p class="table-instruction">Click on any location below to view it on the map</p>
   <table class="contact-table">
     <thead>
       <tr>
@@ -76,31 +81,31 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
+      <tr class="location-row" data-location="Kathmandu, Nepal" data-search="Transport Nagar Ring Road Kathmandu Nepal">
         <td>1.</td>
         <td>Head Office</td>
-        <td>Kathmandu</td>
+        <td>Transport Nagar, Ring Road, Kathmandu</td>
         <td>+977 9801914208 (222) </td>
       </tr>
-      <tr>
+      <tr class="location-row" data-location="Pokhara, Nepal" data-search="Pokhara Nepal">
         <td>2.</td>
         <td>Branch Office</td>
         <td>Pokhara</td>
         <td>+977 9801914226 (229) </td>
       </tr>
-      <tr>
+      <tr class="location-row" data-location="Butwal, Nepal" data-search="Butwal Nepal">
         <td>3.</td>
         <td>Branch Office </td>
         <td>Butwal</td>
         <td>+977 9801914212 </td>
       </tr>
-      <tr>
+      <tr class="location-row" data-location="Narayanghat, Nepal" data-search="Narayanghat Nepal">
         <td>4.</td>
         <td>Branch Office </td>
         <td>Narayanghat</td>
         <td>+977 9801914218 (211) </td>
       </tr>
-      <tr>
+      <tr class="location-row" data-location="Birgunj, Nepal" data-search="Birgunj Nepal">
         <td>5.</td>
         <td>Branch Office </td>
         <td>Birgunj</td>
@@ -111,6 +116,7 @@
 </div>
   <div class="contact-table-wrapper">
   <h3>Delivery Area</h3>
+  <p class="table-instruction">Click on any location below to view it on the map</p>
   <table class="contact-table">
     <thead>
       <tr>
@@ -121,37 +127,37 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
+      <tr class="location-row" data-location="Kathmandu, Nepal" data-search="Kathmandu Nepal">
         <td>1.</td>
         <td>Delivery Office</td>
         <td>Kathmandu</td>
         <td>+977 9801914224 (230) </td>
       </tr>
-      <tr>
+      <tr class="location-row" data-location="Pokhara, Nepal" data-search="Pokhara Nepal">
         <td>2.</td>
         <td>Delivery Office</td>
         <td>Pokhara</td>
         <td>+977 9801914226 (229) / 9802855478 </td>
       </tr>
-      <tr>
+      <tr class="location-row" data-location="Kushma, Nepal" data-search="Kushma Beni Nepal">
         <td>3.</td>
         <td>Delivery Office</td>
         <td>Kushma / Beni</td>
         <td>+977 9801914215 </td>
       </tr>
-      <tr>
+      <tr class="location-row" data-location="Baglung, Nepal" data-search="Baglung Nepal">
         <td>4.</td>
         <td>Delivery Office</td>
         <td>Baglung</td>
         <td>+977 9801914214</td>
       </tr>
-      <tr>
+      <tr class="location-row" data-location="Damauli, Nepal" data-search="Damauli Lamjung Gorkha Nepal">
         <td>5.</td>
         <td>Delivery Office</td>
         <td>Damauli / Aabukhaireni / Lamjung / Gorkha</td>
         <td>+977 9801914220</td>
       </tr>
-      <tr>
+      <tr class="location-row" data-location="Syangja, Nepal" data-search="Syangja Waling Galyang Nepal">
         <td>6.</td>
         <td>Delivery Office</td>
         <td>Syangja / Waling / Galyang</td>

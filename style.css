@@ -1474,6 +1474,54 @@ button#trackOrderStartBtn {
   background-color: #f1f1f1;
 }
 
+/* Interactive location rows */
+.location-row {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.location-row:hover {
+  background-color: #fcaf17 !important;
+  color: #fff;
+  transform: translateX(5px);
+}
+
+.location-row.selected {
+  background-color: #c98300 !important;
+  color: #fff;
+}
+
+.location-row:hover td {
+  color: #fff;
+}
+
+.location-row.selected td {
+  color: #fff;
+}
+
+.table-instruction {
+  font-style: italic;
+  color: #666;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.map-loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(252, 175, 23, 0.9);
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: #fff;
+  font-weight: bold;
+}
+
+.contact-map {
+  position: relative;
+}
+
 
 
 

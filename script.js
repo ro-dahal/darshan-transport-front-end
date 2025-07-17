@@ -198,9 +198,101 @@ window.addEventListener('scroll', function() {
 });
 
 
+// Interactive Map Functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const locationRows = document.querySelectorAll('.location-row');
+    const mapIframe = document.getElementById('locationMap');
+    const mapLoading = document.getElementById('mapLoading');
 
+    // Function to update map based on location
+    function updateMap(location, searchQuery) {
+        if (!mapIframe) return;
 
+        // Show loading indicator
+        if (mapLoading) {
+            mapLoading.style.display = 'block';
+        }
 
+        // Encode the search query for URL
+        const encodedLocation = encodeURIComponent(searchQuery || location);
+        
+        // Use Google Maps embed with search query
+        const searchMapUrl = `https://maps.google.com/maps?q=${encodedLocation}&t=&z=13&ie=UTF8&iwloc=&output=embed`;
+        
+        // Update iframe source
+        mapIframe.src = searchMapUrl;
+        
+        // Hide loading indicator after a delay
+        setTimeout(() => {
+            if (mapLoading) {
+                mapLoading.style.display = 'none';
+            }
+        }, 1500);
+    }
 
+    // Function to scroll to map
+    function scrollToMap() {
+        const mapElement = document.querySelector('.contact-map');
+        if (mapElement) {
+            mapElement.scrollIntoView({ 
+                behavior: 'smooth', 
+                block: 'center' 
+            });
+        }
+    }
 
+    // Function to remove selection from all rows
+    function clearSelection() {
+        locationRows.forEach(row => {
+            row.classList.remove('selected');
+        });
+    }
 
+    // Add click event listeners to all location rows
+    locationRows.forEach(row => {
+        row.addEventListener('click', function() {
+            const location = this.getAttribute('data-location');
+            const searchQuery = this.getAttribute('data-search');
+            
+            if (location) {
+                // Clear previous selection
+                clearSelection();
+                
+                // Mark current row as selected
+                this.classList.add('selected');
+                
+                // Update the map
+                updateMap(location, searchQuery);
+                
+                // Scroll to map
+                setTimeout(() => {
+                    scrollToMap();
+                }, 100);
+                
+                // Optional: Show feedback
+                console.log(`Showing ${location} on map`);
+            }
+        });
+
+        // Add keyboard accessibility
+        row.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                this.click();
+            }
+        });
+
+        // Make rows focusable for accessibility
+        row.setAttribute('tabindex', '0');
+        row.setAttribute('role', 'button');
+        row.setAttribute('aria-label', `View ${this.querySelector('td:nth-child(3)').textContent} on map`);
+    });
+
+    // Set default selection (Head Office - Kathmandu)
+    const defaultRow = document.querySelector('.location-row[data-location*="Kathmandu"]');
+    if (defaultRow) {
+        setTimeout(() => {
+            defaultRow.classList.add('selected');
+        }, 1000);
+    }
+});
