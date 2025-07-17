@@ -1174,6 +1174,10 @@ body {
   padding: 150px 20px 60px; /* Top padding increased to clear wave */
 }
 
+.container {
+  margin: 0 auto;
+}
+
 .section-subtitle {
   text-align: center;
   font-size: 1.2rem;
