@@ -146,7 +146,7 @@ function updateNavbar() {
     // Show navbar at top of page
     if (currentScroll <= 0) {
         navbar.style.transform = 'translateY(0px)';
-        navbar.style.background = 'rgba(0, 0, 0, 0.75)';
+        navbar.style.background = 'rgba(56, 56, 56, 1)';
         lastScrollTop = currentScroll;
         return;
     }
@@ -178,9 +178,9 @@ function updateNavbar() {
     // Update background opacity based on scroll
     if (navbar) {
         if (currentScroll > 100) {
-            navbar.style.background = 'rgba(0, 0, 0, 0.95)';
+            navbar.style.background = 'rgba(56, 56, 56, 1)';
         } else {
-            navbar.style.background = 'rgba(0, 0, 0, 0.75)';
+            navbar.style.background = 'rgba(56, 56, 56, 1)';
         }
     }
     
