@@ -132,34 +132,50 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// Smart navbar scroll behavior
+// Smart navbar scroll behavior - moves proportionally with scroll
 let lastScrollTop = 0;
 const navbar = document.getElementById('headerr');
+let ticking = false;
 
-window.addEventListener('scroll', function() {
+function updateNavbar() {
     const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+    
+    // Get the actual navbar height dynamically
+    const navbarHeight = navbar ? navbar.offsetHeight : 90;
     
     // Show navbar at top of page
     if (currentScroll <= 0) {
-        navbar.classList.remove('nav-hidden');
-        navbar.classList.add('nav-visible');
+        navbar.style.transform = 'translateY(0px)';
+        navbar.style.background = 'rgba(0, 0, 0, 0.75)';
+        lastScrollTop = currentScroll;
         return;
     }
     
-    // Hide navbar when scrolling down, show when scrolling up
-    if (currentScroll > lastScrollTop && currentScroll > 100) {
-        // Scrolling down & past 100px
-        navbar.classList.remove('nav-visible');
-        navbar.classList.add('nav-hidden');
-    } else if (currentScroll < lastScrollTop) {
-        // Scrolling up
-        navbar.classList.remove('nav-hidden');
-        navbar.classList.add('nav-visible');
+    // Calculate how much to move navbar based on scroll direction and speed
+    const scrollDelta = currentScroll - lastScrollTop;
+    
+    // Get current navbar position
+    const currentTransform = navbar.style.transform;
+    let currentY = 0;
+    
+    if (currentTransform && currentTransform.includes('translateY')) {
+        const match = currentTransform.match(/translateY\(([^)]+)px\)/);
+        if (match) {
+            currentY = parseFloat(match[1]);
+        }
     }
     
-    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+    // Calculate new position - move navbar proportionally to scroll
+    let newY = currentY - scrollDelta;
     
-    // Optional: Add background opacity based on scroll
+    // Limit the movement to the navbar height range
+    newY = Math.max(newY, -navbarHeight); // Don't go further up than navbar height
+    newY = Math.min(newY, 0); // Don't go below the top position
+    
+    // Apply the transform
+    navbar.style.transform = `translateY(${newY}px)`;
+    
+    // Update background opacity based on scroll
     if (navbar) {
         if (currentScroll > 100) {
             navbar.style.background = 'rgba(0, 0, 0, 0.95)';
@@ -167,19 +183,20 @@ window.addEventListener('scroll', function() {
             navbar.style.background = 'rgba(0, 0, 0, 0.75)';
         }
     }
-});
+    
+    lastScrollTop = currentScroll;
+}
 
-// Add scroll effect to header
 window.addEventListener('scroll', function() {
-    const header = document.getElementById('headerr');
-    if (header) {
-        if (window.scrollY > 100) {
-            header.style.background = 'rgba(0, 0, 0, 0.95)';
-        } else {
-            header.style.background = 'rgba(0, 0, 0, 0.75)';
-        }
+    if (!ticking) {
+        requestAnimationFrame(function() {
+            updateNavbar();
+            ticking = false;
+        });
+        ticking = true;
     }
 });
+
 
 
 
